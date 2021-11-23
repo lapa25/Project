@@ -32,8 +32,9 @@ class MyWidget(QMainWindow):
     def draw(self, qp):
         sp = [[100, 100], [600, 100], [100, 450], [600, 450], [350, 250]]
         for i in range(5):
+            r, g, b = randint(0, 255), randint(0, 255), randint(0, 255)
             size = randint(10, 100)
-            qp.setBrush(QColor(255, 255, 0))
+            qp.setBrush(QColor(r, g, b))
             qp.drawEllipse(QPoint(*sp[i]), size, size)
 
 
